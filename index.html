@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer type="text/javascript"
+    src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+  <link rel="icon" type="image/png" href="IMG/calligraphy.png" />
+  <title>Portrait Chinois</title>
+</head>
+
+<body>
+  <section id="accueil">
+    <header>
+      <div class="center">
+        <div class="bordure"></div>
+        <div class="cercle"></div>
+      </div>
+      <div class="titre">
+        <h1>portrait chinois</h1>
+        <hr />
+        <h2>dan phan nguyen</h2>
+      </div>
+      <div class="scroll-down">
+        <a href="#about-me">
+          <h3>voir plus</h3>
+          <img src="IMG/Fleche.png" alt="button scroll" />
+        </a>
+      </div>
+    </header>
+  </section>
+
+  <img src="IMG/rightbanner.jpg" alt="banniere" class="rightbanner" />
+  <img src="IMG/leftbanner.jpg" alt="banniere" class="leftbanner" />
+  <img src="IMG/Day.svg" alt="dayButton" class="dayButton">
+  <img src="IMG/Night.svg" alt="nightButton" class="nightButton cacher">
+  <div class="navbar cacher">
+    <div>
+      <ul>
+        <li>
+          <a href="#section1" alt="go-to-section1"></a>
+        </li>
+        <li>
+          <a href="#section2" alt="go-to-section2"></a>
+        </li>
+        <li>
+          <a href="#section3" alt="go-to-section3"></a>
+        </li>
+        <li>
+          <a href="#section4" alt="go-to-section4"></a>
+        </li>
+        <li>
+          <a href="#section5" alt="go-to-section5"></a>
+        </li>
+        <li>
+          <a href="#section6" alt="go-to-section6"></a>
+        </li>
+        <li>
+          <a href="#section7" alt="go-to-section7"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="go-top">
+    <a href="#accueil"><img src="IMG/Arrow.svg" alt="go-top"></a>
+  </div>
+
+  <div class="gradient">
+    <section id="about-me">
+      <img src="IMG/ChunLoTiger.png" alt="tiger" class="tiger" />
+      <div class="centerGradient" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+        <div class="centerCarre">
+          <div class="bordureCarre"></div>
+          <div class="carre" id="divaboutme">
+            <h2>DAN PHAN NGUYEN</h2>
+            <p>
+              Actuellement en BUT <b>Métiers du Multimédia et de l'Internet</b> j'apprends les différents languages
+              permettant de coder un site web ainsi
+              que l'élaboration des visuels et des maquettes nécessaires à sa réalisation. Je suis <b>sociable</b>,
+              <b>ponctuel</b>, toujours <b>appliqué</b> et <b>investi</b> dans tous les projets que j’entreprends.
+            </p>
+            <br>
+            <p>
+              Ces qualités m’ont permis d’intégrer cette formation et de m’y épanouir grâce à mon intérêt grandissant
+              envers les produits multimédias et leur conception.
+            </p>
+            <br>
+            <p>Je vous propose donc de découvrir mon univers à travers ce portrait chinois.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="analogies" class="analogies">
+    </div>
+
+    <section class="form">
+      <form method="get">
+
+        <div class="bordureForm">
+          <div class="carreForm">
+            <div class="marginForm">
+              <label for="analogie">
+                Si j'étais
+              </label>
+              <br>
+              <input type="text" placeholder="Un pays" name="analogie" id="analogie" required>
+            </div>
+            <div class="marginForm">
+              <br>
+              <label for="valeurAnalogie">
+                Je serais
+              </label>
+              <br>
+              <input type="text" placeholder="Le Vietnam" name="valeurAnalogie" id="valeurAnalogie" required>
+            </div>
+            <!-- le required sert a forcer la réponse -->
+            <div class="marginForm">
+              <br>
+              <label for="desc">
+                Description
+              </label>
+              <br>
+              <input type="text" placeholder="Le Vietnam est un pays magnifique car ..." name="desc" id="desc" required>
+            </div>
+            <div class="marginForm">
+              <br>
+              <label for="illust">
+                Illustration
+              </label>
+              <br>
+              <input type="text" name="illust" id="illust" placeholder="URL de l'image" required>
+            </div>
+            <div class="marginForm">
+              <br>
+              <label for="courriel">
+                Mail
+              </label>
+              <br>
+              <input type="email" name="courriel" id="courriel" placeholder="Votre mail :) " required>
+            </div>
+            <div class="marginForm">
+              <br>
+              <input type="submit" name="submit" value="VALIDER" id="submit">
+            </div>
+          </div>
+        </div>
+
+      </form>
+      <p id="message"></p>
+    </section>
+
+    <div id="newAnalogies" class="analogies">
+    </div>
+
+    <section id="footer">
+
+      <div class="popup">
+        <div class="visuelPopup">
+          <div class="popupImg"></div>
+          <div class="centerCarre">
+            <div class="carrePopup">
+              <a class="close" href="#mentions">X</a>
+              <h2>mentions légales</h2>
+
+              <div class="liensMentions">
+                <a href="https://unsplash.com/fr" target="_blank" class="credit">Unsplash</a>
+                <p class="between">-</p>
+                <a href="https://www.essentialhomme.fr/gunna-pochette-drip-season-4-daniel-arsham/" target="_blank"
+                  class="credit">Daniel Arsham</a>
+                <p class="between">-</p>
+                <a href="https://www.dezeen.com/2022/01/20/ikeuchi-hiroto-exhibition-wearable-technology-sai-gallery-tokyo/"
+                  target="_blank" class="credit">Ikeuchi Hiroto</a>
+              </div>
+              <p class="txtMentions">Toutes les images utilisées sur cette page sont libres de droit pour usage
+                personnel, et ne feront jamais l'objet d'une commercialisation.</p>
+
+              <div class="liensMentions">
+                <a href="https://www.dafont.com/fr/edo-sz.font" target="_blank" class="credit">EdoSZ</a>
+                <p class="between">-</p>
+                <a href="https://www.onlinewebfonts.com/download/b87d47a7d7f3dcf1b8444dfd1b8199ac" target="_blank"
+                  class="credit">New
+                  Esprit</a>
+                <p class="between">-</p>
+                <a href="https://fonts.google.com/specimen/DM+Sans" target="_blank" class="credit">DM SANS</a>
+              </div>
+              <p class="txtMentions">Liens vers les différentes typographies utilisées lors de la conception du site.
+              </p>
+
+              <p class="txtMentions">Hébergeur : Université Gustave Eiffel - 2 rue Albert Einstein, 77420
+                Champs-sur-Marne, France - 01 60 95 75 00 - webmaster@univ-eiffel.fr</p>
+              <p class="txtMentions">Conformément à l'article 15 du Règlement général sur la protection des données
+                (RGPD) du 27 avril 2016, vous disposez d'un droit d'accès aux informations vous concernant. Si vous
+                trouvez que ces informations sont incorrectes, l'article 16 du RGPD vous permet de les modifier ou de
+                les supprimer. Dans ce cas, merci de contacter le directeur de la communication : com@univ-eiffel.fr.
+              </p>
+              <p class="txtMentions">Le formulaire permettant la création d’une analogie personnalisée recueil votre
+                adresse de courriel et votre adresse IP. Pour toute question portant sur la collecte ou le traitement de
+                vos données à caractère personnel par l’UPEM, vous pouvez saisir la personne responsable du traitement
+                des données qui est : Philippe Gambette (philippe.gambette@univ-eiffel.fr) Les fichiers détenus par
+                l'UPEM qui comportent des données à caractère personnel ne seront jamais transmis à des tiers et ne
+                feront jamais l'objet d'une commercialisation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="petals-container">
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                </div> -->
+      <div class="centerGradient">
+        <img src="IMG/CherryBlossom.png" alt="cherryTree" class="cherryTree" />
+      </div>
+      <div class="onclick mentions" id="mentions">
+        <h2>mentions légales</h2>
+      </div>
+    </section>
+  </div>
+  <script defer type="text/javascript" src="data.js"></script>
+  <!-- importer le javascript + charger au début avec defer -->
+  <script defer type="text/javascript" src="script.js"></script>
+
+
+
+
+</body>
+
+</html>

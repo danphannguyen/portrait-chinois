@@ -1,0 +1,753 @@
+@font-face {
+  font-family: "New Esprit";
+  src: url("TYPO/NewEspritITC/NewEspritITC.otf") format("otf"),
+    url("TYPO/NewEspritITC/NewEspritITC.woff") format("woff"),
+    url("TYPO/NewEspritITC/NewEspritITC.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EDOSZ";
+  src: url("TYPO/EDOSZ/edosz.otf") format("otf"),
+    url("TYPO/EDOSZ/edosz.woff") format("woff"),
+    url("TYPO/EDOSZ/edosz.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Importation des fonts */
+
+/* ================================================= LIGHT/DARK MODE ================================================= */
+
+:root {
+  --clr-foreground: rgb(0, 100, 106);
+  --clr-pop-foreground: rgba(0, 100, 106, 0.9);
+  --clr-sgradient-foreground: rgb(255, 252, 242);
+  --clr-egradient-foreground: rgba(11, 167, 129, 0.489583);
+  --clr-circle-foreground: rgba(197, 197, 197, 0.75);
+  --clr-gotop-foreground: rgba(11, 167, 129, 0.489583);
+  --clr-hgotop-foreground: rgba(11, 167, 129, 1);
+  --img-background: url("IMG/TEMPLE.jpg");
+}
+
+.light-theme {
+  --clr-foreground: rgb(0, 100, 106);
+  --clr-pop-foreground: rgba(0, 100, 106, 0.9);
+  --clr-sgradient-foreground: rgb(255, 252, 242);
+  --clr-egradient-foreground: rgba(11, 167, 129, 0.489583);
+  --clr-circle-foreground: rgba(197, 197, 197, 0.75);
+  --clr-gotop-foreground: rgba(11, 167, 129, 0.489583);
+  --clr-hgotop-foreground: rgba(11, 167, 129, 1);
+  --img-foreground: "IMG/Day.svg";
+  --img-background: url("IMG/TEMPLE.jpg");
+}
+
+.dark-theme {
+  --clr-foreground: rgb(176, 52, 82);
+  --clr-pop-foreground: rgba(176, 52, 82, 0.9);
+  --clr-sgradient-foreground: rgb(44, 41, 69);
+  --clr-egradient-foreground: rgb(69, 44, 87);
+  --clr-circle-foreground: rgba(243, 41, 89, 0.75);
+  --clr-gotop-foreground: rgba(155, 61, 84, 0.75);
+  --clr-hgotop-foreground: rgba(155, 61, 84, 1);
+  --img-foreground: "IMG/Night.svg";
+  --img-background: url("IMG/RUE.jpg");
+}
+
+/* ================================================================================================== */
+
+body #magicMouseCursor {
+  z-index: 90000000000000 !important;
+  border: 2px solid white !important;
+  mix-blend-mode: difference;
+}
+
+body #magicPointer {
+  z-index: 90000000000000 !important;
+  background: white !important;
+  mix-blend-mode: difference;
+
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* convetir le tout en border-box */
+
+html {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* smooth scrool */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-foreground);
+}
+
+/* margin à 0  pour le body + backgroud color */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Mettre toute les margin à 0 pour les textes */
+
+h1 {
+  font-size: 6rem;
+  font-family: "EDOSZ", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "EDOSZ", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+h3,
+label {
+  font-family: "EDOSZ", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+p {
+  font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* definition des tailles de h1 / h2 / h3 etc  */
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* enlever toute les décorations et changement des liens */
+
+/* ================================================= ACCUEIL / Header ================================================= */
+
+header {
+  height: 100vh;
+  /*vh = 100% d'un écran en hauteur */
+  /* width: 100vw; */
+  /*vw = 100% d'un écran en largeur*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    var(--img-background);
+  /* assombrir l'image de fond */
+  background-size: cover;
+  /* cover = couvrir la place donné*/
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* alignement au centre */
+  z-index: 10;
+  transition: all 2s ease;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  -moz-scroll-snap-align: start;
+  -moz-scroll-snap-stop: always;
+}
+
+/* définition d'une section + scroll de section en section  */
+
+.titre {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* mise en forme du titre " Portrait chinois " */
+
+hr {
+  color: white;
+  width: 70%;
+}
+
+/* création d'une bar pour le design  */
+
+.titre h1 {
+  letter-spacing: 10px;
+}
+
+/* agrandissement du letter spacing seulement pour le h1 du titre  */
+
+.titre h2 {
+  font-family: "New Esprit";
+  font-size: 2rem;
+}
+
+/* Changement de font et de taille pour le h2 du titre  */
+
+.center {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* class center réutilisable  */
+
+.cercle {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  background: var(--clr-circle-foreground);
+  transition: all 1s ease;
+}
+
+/* cercle intérieur dans le fond de l'accueil  */
+
+.bordure {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 21.5vw;
+  height: 21.5vw;
+  border-radius: 50%;
+  /* arrondissement des coins */
+  border: 5px solid var(--clr-circle-foreground);
+  transition: all 1s ease;
+}
+
+/* bordure du rond de l'accueil  */
+
+.scroll-down {
+  position: absolute;
+  bottom: 9vh;
+  color: white;
+  font-family: "New Esprit";
+  text-transform: uppercase;
+}
+
+.scroll-down a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  /* sert a mettre de l'espace entre des balises */
+}
+
+/* icone pour scroll vers le bas  */
+
+/* ================================================= GRADIENT FOND =================================================*/
+
+.gradient {
+  height: 100%;
+  width: 80%;
+  top: 0;
+  background: linear-gradient(180deg,
+      var(--clr-sgradient-foreground) 0%,
+      var(--clr-egradient-foreground) 100%);
+  box-shadow: 16px 4px 10px rgba(0, 0, 0, 0.25),
+    -16px 4px 10px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+}
+
+/* definition du gradient en background des sections  */
+
+.centerGradient {
+  height: 100vh;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Class reutilisable permettant de centrer à l'intérieur du gradient */
+
+.rightbanner {
+  position: fixed;
+  width: 10%;
+  height: 80vh;
+  left: 0;
+  top: 10vh;
+  z-index: -1000;
+}
+
+/* definition de la bannière de droite (IMG) */
+
+.leftbanner {
+  position: fixed;
+  width: 10%;
+  height: 80vh;
+  right: 0;
+  top: 10vh;
+  z-index: -1000;
+}
+
+/* definition de la bannière de gauche (IMG) */
+
+.dayButton {
+  position: fixed;
+  width: 3vw;
+  height: 3vw;
+  left: 2rem;
+  top: 2rem;
+  z-index: 1000;
+  cursor: pointer;
+  display: block;
+  transition: all 1s ease;
+}
+
+.nightButton {
+  position: fixed;
+  width: 3vw;
+  height: 3vw;
+  left: 2rem;
+  top: 2rem;
+  z-index: 1000;
+  cursor: pointer;
+  display: block;
+  transition: all 1s ease;
+}
+
+/* ================================================= Début A propos ================================================= */
+
+#divaboutme h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ================================================= Début Navbar ================================================= */
+
+.navbar {
+  height: 5vh;
+  width: 3vw;
+  position: fixed;
+  z-index: 2;
+  color: black;
+  top: 0;
+  bottom: 0;
+  right: 13vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul li a {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #d9d5ce;
+  border: solid 0.25rem #fff9e5;
+  opacity: 0.75;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: all 1s ease;
+}
+
+.navbar ul li a:hover {
+  height: 2rem;
+  width: 2rem;
+}
+
+
+
+/* ================================================= Début Button Top ================================================= */
+
+.go-top {
+  position: fixed;
+  bottom: 3rem;
+  right: 7rem;
+  text-decoration: none;
+  color: white;
+  background-color: var(--clr-gotop-foreground);
+  border-radius: 1rem;
+  font-size: 12px;
+  padding: 1rem;
+  display: none;
+  z-index: 10;
+  transition: all 1s ease;
+}
+
+.go-top:hover {
+  background-color: var(--clr-hgotop-foreground);
+}
+
+/* ================================================= Début à propos ================================================= */
+
+.tiger {
+  position: absolute;
+  width: 80vw;
+  height: 90vh;
+  background-size: cover;
+  margin-top: 5vh;
+}
+
+/* definition de l'image de tigre */
+
+.carre {
+  position: absolute;
+  width: 40vw;
+  /* height: 60vh; */
+  border-radius: 10px;
+  background: var(--clr-foreground);
+  padding: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* definition du Carre */
+
+.bordureCarre {
+  position: absolute;
+  width: 41.5vw;
+  /* height: 62.5vh; */
+  border-radius: 15px;
+  /* arrondissement des coins */
+  border: 5px solid var(--clr-foreground);
+}
+
+.newCarre {
+  height: 50vh;
+}
+
+.newBordure {
+  height: 52.5vh;
+}
+/* definition des Bordure du carré */
+
+.centerCarre {
+  width: 45vw;
+  height: 65vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Class reutilisable permettant de centrer le carre et la bordure*/
+
+/* ================================================= DEBUT ANALOGIES  =================================================*/
+
+.analogies p {
+  line-height: 1.3rem;
+}
+
+.imgFond {
+  position: absolute;
+  width: 80vw;
+  height: 80vh;
+  background-size: cover;
+  margin-top: 5vh;
+}
+
+/* Definition des caractéristiques de l'image de fond des analogies */
+
+.centerCercle {
+  height: 22vh;
+  width: 22vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Class reutilisable permettant de centrer le cercle et sa bordure */
+
+.cercleAna {
+  position: inline;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  background: var(--clr-foreground);
+  background-size: cover;
+}
+
+/* Definition du cercle */
+
+.bordureAna {
+  box-sizing: border-box;
+  position: absolute;
+  width: 21.5vw;
+  height: 21.5vw;
+  border-radius: 50%;
+  /* arrondissement des coins */
+  border: 5px solid var(--clr-foreground);
+}
+
+/* Definition des bordures du cercle */
+
+.centerTexte {
+  text-align: center;
+}
+
+.legendAnalogies {
+  margin-bottom: 1rem;
+}
+
+/* ================================================= DEBUT FORM ================================================= */
+
+.form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "DM SANS", sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+
+form label {
+  margin-bottom: -1rem;
+}
+
+.marginForm {
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 1rem;
+  border: none;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-family: "DM SANS", sans-serif;
+}
+
+input:focus {
+  outline: 1px solid white;
+}
+
+#desc {
+  width: 25rem;
+  height: 5rem;
+}
+
+#submit {
+  padding: 0;
+  width: 8rem;
+  height: 3rem;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.carreForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 40vw;
+  border-radius: 10px;
+  background-color: var(--clr-foreground);
+}
+
+.bordureForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41.5vw;
+  height: 92.5vh;
+  border-radius: 15px;
+  border: 5px solid var(--clr-foreground);
+}
+
+/* ================================================= DEBUT FOOTER ================================================= */
+
+.cherryTree {
+  width: 80vw;
+  height: 80vh;
+}
+
+/* Definition de l'image d'arbre en footer */
+
+.mentions {
+  text-transform: uppercase;
+  position: relative;
+  bottom: 10vh;
+  margin-left: auto;
+  margin-right: 5vw;
+  height: fit-content;
+  width: fit-content;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.mentions:hover {
+  color: white;
+}
+
+/* Definition du lien " Mentions Legales " en footer */
+
+.popup {
+  visibility: hidden;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.visuelPopup {
+  position: absolute;
+  left: 0vw;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.popupImg {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(IMG/FondMentions.jpg);
+  opacity: 0.75;
+}
+
+.carrePopup {
+  position: absolute;
+  width: 60vw;
+  /* height: 70vh; */
+  border-radius: 15px;
+  background-color: var(--clr-pop-foreground);
+  padding: 2rem;
+  color: white;
+  border: 5px solid #fff9e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* definition du Carre */
+
+.close {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  top: 1rem;
+  right: 2rem;
+  font-size: 3rem;
+  font-family: "EDOSZ", sans-serif;
+  color: white;
+  transition: 1s;
+}
+
+.carrePopup a:hover {
+  color: black;
+}
+
+.liensMentions {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+.carrePopup h3 {
+  text-align: start;
+  font-family: 'DM Sans';
+  width: 100%;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.carrePopup h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.txtMentions {
+  text-align: center;
+  margin-bottom: 1.5rem ;
+}
+
+.credit {
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "EDOSZ", sans-serif;
+  color: white;
+  transition: 1s;
+}
+
+.between {
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  font-family: "EDOSZ", sans-serif;
+}
+
+.affiche {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cacher {
+  opacity: 0;
+  visibility: hidden;
+}
